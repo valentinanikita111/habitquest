@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hábitos activos | HabitQuest</title>
+	<meta name="description" content="Elige un hábito activo y conoce toda la información para comenzar tu reto en HabitQuest.">
+	<link rel="stylesheet" href="habitos.css">
+</head>
+<body>
+	<header class="topbar">
+		<div class="shell nav-wrap">
+			<a class="brand-link" href="inicio.html" aria-label="Volver al inicio de HabitQuest">
+				<img class="brand-logo" src="images/WhatsApp Image 2026-06-13 at 6.53.46 AM.jpeg" alt="Logo de HabitQuest"><span class="brand">HabitQuest</span>
+			</a>
+			<nav class="nav" aria-label="Navegación principal">
+				<a href="inicio.html">Inicio</a><a class="nav-active" href="habitos.html">Hábitos</a><a href="registro.html" class="button button-small">Crear cuenta</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="intro shell">
+			<div class="eyebrow">Hábitos activos · 04</div>
+			<h1>Elige el hábito que quieres empezar</h1>
+			<p class="intro-copy">Explora cada opción, descubre cómo incorporarla a tu rutina y elige un primer paso que puedas sostener.</p>
+		</section>
+
+		<section class="habit-section shell" aria-label="Hábitos disponibles">
+			<div class="habit-choices" role="tablist" aria-label="Selecciona un hábito">
+				<button class="habit-card is-selected" type="button" role="tab" aria-selected="true" aria-controls="habit-detail" data-habit="meditacion"><span class="habit-emoji" aria-hidden="true">🧘</span><span><strong>Meditación</strong><small>10 min al despertar</small></span><span class="card-arrow" aria-hidden="true">↗</span></button>
+				<button class="habit-card" type="button" role="tab" aria-selected="false" aria-controls="habit-detail" data-habit="hidratacion"><span class="habit-emoji" aria-hidden="true">💧</span><span><strong>Hidratación</strong><small>Un vaso cada hora</small></span><span class="card-arrow" aria-hidden="true">↗</span></button>
+				<button class="habit-card" type="button" role="tab" aria-selected="false" aria-controls="habit-detail" data-habit="movimiento"><span class="habit-emoji" aria-hidden="true">🏃</span><span><strong>Movimiento</strong><small>Caminar o estirarte</small></span><span class="card-arrow" aria-hidden="true">↗</span></button>
+				<button class="habit-card" type="button" role="tab" aria-selected="false" aria-controls="habit-detail" data-habit="lectura"><span class="habit-emoji" aria-hidden="true">📖</span><span><strong>Lectura</strong><small>Una página o capítulo</small></span><span class="card-arrow" aria-hidden="true">↗</span></button>
+			</div>
+
+			<article class="habit-detail" id="habit-detail" aria-live="polite">
+				<div class="detail-heading"><div class="detail-icon" id="detailIcon" aria-hidden="true">🧘</div><div><p class="detail-kicker" id="detailKicker">Ideal para empezar</p><h2 id="detailTitle">Meditación de 10 minutos</h2><p class="detail-description" id="detailDescription">Una pausa breve para bajar el ritmo y empezar el día con calma.</p></div></div>
+				<div class="habit-meta" aria-label="Datos principales del hábito"><div><span>Frecuencia</span><strong id="detailFrequency">Diario</strong></div><div><span>Duración</span><strong id="detailDuration">10 minutos</strong></div><div><span>Dificultad</span><strong id="detailDifficulty">Fácil</strong></div></div>
+				<div class="detail-columns"><div><h3>¿Por qué hacerlo?</h3><ul class="benefit-list" id="detailBenefits"></ul></div><div><h3>Cómo empezar hoy</h3><ol class="steps-list" id="detailSteps"></ol></div></div>
+				<div class="tip-box"><span class="tip-icon" aria-hidden="true">✦</span><p><strong>Consejo para mantenerlo</strong><span id="detailTip">Empieza con una meta pequeña y repite el hábito a la misma hora.</span></p></div>
+				<a class="button button-primary" href="registro.html">Comenzar este hábito <span aria-hidden="true">→</span></a>
+			</article>
+		</section>
+	</main>
+
+	<footer class="footer"><div class="shell footer-content"><strong>HabitQuest</strong><span>Un hábito pequeño puede cambiar tu día.</span></div></footer>
+
+	<script>
+		const habits = {
+			meditacion: { icon: '🧘', kicker: 'Ideal para empezar', title: 'Meditación de 10 minutos', description: 'Una pausa breve para bajar el ritmo y empezar el día con calma.', frequency: 'Diario', duration: '10 minutos', difficulty: 'Fácil', benefits: ['Reduce el estrés y mejora tu concentración.', 'Te ayuda a comenzar el día con más claridad.', 'Crea un espacio diario para escucharte.'], steps: ['Busca un lugar tranquilo y siéntate cómodamente.', 'Respira lento y enfócate en el aire durante 10 minutos.', 'Registra el hábito al terminar.'], tip: 'Si tu mente se distrae, vuelve con calma a tu respiración sin juzgarte.' },
+			hidratacion: { icon: '💧', kicker: 'Muy fácil', title: 'Tomar agua con intención', description: 'Un recordatorio simple para cuidar tu energía y crear una rutina saludable.', frequency: 'Diario', duration: '1 vaso cada hora', difficulty: 'Fácil', benefits: ['Mantiene tu cuerpo hidratado durante el día.', 'Puede mejorar tu energía y atención.', 'Convierte una necesidad diaria en una rutina consciente.'], steps: ['Llena una botella y mantenla cerca de ti.', 'Toma un vaso al despertar y luego uno cada hora.', 'Marca cada vaso completado en tu seguimiento.'], tip: 'Usa una botella reutilizable con marcas de horario para que sea más fácil recordar.' },
+			movimiento: { icon: '🏃', kicker: 'Activo', title: 'Movimiento de 15 minutos', description: 'Una rutina breve para mover tu cuerpo, despertar tu energía y despejar la mente.', frequency: 'Cada 2 días', duration: '15 minutos', difficulty: 'Intermedia', benefits: ['Rompe los periodos largos de sedentarismo.', 'Activa tu cuerpo sin necesitar mucho tiempo.', 'Mejora tu ánimo y sensación de energía.'], steps: ['Elige caminar, estirar o hacer una rutina suave.', 'Muévete durante 15 minutos a tu propio ritmo.', 'Anota cómo te sentiste después de terminar.'], tip: 'Deja tus zapatos o ropa deportiva listos para eliminar excusas antes de empezar.' },
+			lectura: { icon: '📖', kicker: 'Reflexivo', title: 'Lectura de 10 minutos', description: 'Un momento de pausa para enfocar tu mente y crecer con pequeñas dosis diarias.', frequency: 'Diario', duration: '10 minutos', difficulty: 'Fácil', benefits: ['Fortalece tu concentración y comprensión.', 'Te regala un descanso lejos de las pantallas.', 'Mantiene vivo el aprendizaje con constancia.'], steps: ['Escoge un libro y déjalo visible antes de comenzar.', 'Lee una página o capítulo durante 10 minutos.', 'Guarda una frase o idea que te haya gustado.'], tip: 'Lee siempre después de una actividad fija, como desayunar o prepararte para dormir.' }
+		};
+		const ids = ['Icon', 'Kicker', 'Title', 'Description', 'Frequency', 'Duration', 'Difficulty', 'Benefits', 'Steps', 'Tip'];
+		const elements = Object.fromEntries(ids.map(id => [id.toLowerCase(), document.getElementById(`detail${id}`)]));
+		function showHabit(key) {
+			const habit = habits[key];
+			elements.icon.textContent = habit.icon; elements.kicker.textContent = habit.kicker; elements.title.textContent = habit.title; elements.description.textContent = habit.description;
+			elements.frequency.textContent = habit.frequency; elements.duration.textContent = habit.duration; elements.difficulty.textContent = habit.difficulty; elements.tip.textContent = habit.tip;
+			elements.benefits.innerHTML = habit.benefits.map(item => `<li>${item}</li>`).join(''); elements.steps.innerHTML = habit.steps.map(item => `<li>${item}</li>`).join('');
+		}
+		document.querySelectorAll('.habit-card').forEach(button => button.addEventListener('click', () => {
+			document.querySelectorAll('.habit-card').forEach(card => { const selected = card === button; card.classList.toggle('is-selected', selected); card.setAttribute('aria-selected', selected); });
+			showHabit(button.dataset.habit);
+		}));
+		showHabit('meditacion');
+	</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Styles specific to the 'Nuestro equipo' section */
+#nuestro-equipo{padding:3rem 0;background:linear-gradient(180deg, rgba(112,67,157,0.08), transparent)}
+#nuestro-equipo .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+#nuestro-equipo .member{background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015));padding:1rem;border-radius:12px;border:1px solid var(--glass-border);text-align:center;transition:transform .28s ease,box-shadow .28s ease}
+#nuestro-equipo .member:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.4)}
+#nuestro-equipo .member::before{content:'';display:block;width:64px;height:64px;margin:0 auto 0.6rem;border-radius:50%;background:linear-gradient(90deg,#70439d,#a578d2);box-shadow:inset 0 -6px 12px rgba(0,0,0,0.24)}
+#nuestro-equipo h2{margin-bottom:1rem}
+
+@media (max-width:900px){
+  #nuestro-equipo .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  #nuestro-equipo .team-grid{grid-template-columns:1fr}
+}

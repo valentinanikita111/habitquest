@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Registro — HabitQuest</title>
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a href="inicio.html" class="brand-link">
+        <img src="images/WhatsApp Image 2026-06-13 at 6.53.46 AM.jpeg" alt="HabitQuest logo" class="brand-logo">
+        <div class="brand">HabitQuest</div>
+      </a>
+      <nav class="nav">
+        <a href="inicio.html">Inicio</a>
+        <a href="login.html">Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section auth-section">
+      <div class="container auth-container">
+        <div>
+          <h1>Crea tu cuenta en HabitQuest</h1>
+          <p class="lead muted">Empieza hoy: crea hábitos, participa en retos y gana recompensas.</p>
+          <form id="registerForm" class="auth-form">
+            <label>Nombre completo<input name="name" type="text" required></label>
+            <label>Correo electrónico<input name="email" type="email" required></label>
+            <label>Contraseña<input name="password" type="password" required></label>
+            <label>Confirmar contraseña<input name="confirm" type="password" required></label>
+            <div style="display:flex;gap:.6rem;margin-top:.6rem">
+              <button class="btn primary" type="submit">Registrar</button>
+              <a class="btn ghost" href="login.html">Tengo cuenta</a>
+            </div>
+          </form>
+        </div>
+        <div>
+          <div class="card" style="padding:1.2rem">
+            <h3>¿Por qué registrarte?</h3>
+            <ul class="muted">
+              <li>Sincroniza tu progreso en todos tus dispositivos.</li>
+              <li>Participa en retos grupales y gana badges.</li>
+              <li>Recibe recordatorios personalizados.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Theme sync from localStorage
+    (function(){
+      const saved = localStorage.getItem('habitquest-theme');
+      if(saved==='dark') document.documentElement.classList.add('dark');
+    })();
+    // Basic register form behavior (demo only)
+    document.getElementById('registerForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      alert('Registro simulado. En una app real, se conectaría a Firebase.');
+      location.href = 'inicio.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Iniciar sesión — HabitQuest</title>
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a href="inicio.html" class="brand-link">
+        <img src="images/WhatsApp Image 2026-06-13 at 6.53.46 AM.jpeg" alt="HabitQuest logo" class="brand-logo">
+        <div class="brand">HabitQuest</div>
+      </a>
+      <nav class="nav">
+        <a href="inicio.html">Inicio</a>
+        <a href="registro.html">Registro</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section" style="padding:4rem 0">
+      <div class="container" style="display:grid;grid-template-columns:420px 1fr;gap:2rem;align-items:center">
+        <div>
+          <div class="card" style="padding:1.2rem">
+            <h3>Bienvenido de nuevo</h3>
+            <p class="muted">Ingresa para continuar con tus retos y progreso.</p>
+            <form id="loginForm" class="auth-form">
+              <label>Correo electrónico<input name="email" type="email" required></label>
+              <label>Contraseña<input name="password" type="password" required></label>
+              <div style="display:flex;gap:.6rem;margin-top:.6rem">
+                <button class="btn primary" type="submit">Iniciar sesión</button>
+                <a class="btn ghost" href="registro.html">Crear cuenta</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div>
+          <h1>Recupera tu disciplina</h1>
+          <p class="lead muted">Retoma tus hábitos, sigue tu racha y gana recompensas.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(){
+      const saved = localStorage.getItem('habitquest-theme');
+      if(saved==='dark') document.documentElement.classList.add('dark');
+    })();
+    document.getElementById('loginForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      alert('Inicio de sesión simulado. En una app real, autenticar con Firebase.');
+      location.href = 'inicio.html';
+    });
+  </script>
+</body>
+</html>
